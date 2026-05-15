@@ -1,0 +1,37 @@
+# Entity: quote
+
+main: kit: entity: quote: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "quote"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  name: "quote"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          method: "GET"
+          orig: "/random"
+          parts: [
+            "random"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
