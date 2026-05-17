@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/alan-perlis-quotes-sdk"
-	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/core"
+	sdk "github.com/voxgig-sdk/alan-perlis-quotes-sdk/go"
+	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/utility/struct"
 )
 
 func TestQuoteEntity(t *testing.T) {

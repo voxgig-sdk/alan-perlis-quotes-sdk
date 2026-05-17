@@ -1,10 +1,10 @@
 package voxgigalanperlisquotessdk
 
 import (
-	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/core"
-	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/entity"
-	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/feature"
-	_ "github.com/voxgig-sdk/alan-perlis-quotes-sdk/utility"
+	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/core"
+	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/entity"
+	"github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/feature"
+	_ "github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/alan-perlis-quotes-sdk/core"
+import "github.com/voxgig-sdk/alan-perlis-quotes-sdk/go/core"
 
 func resultBodyUtil(ctx *core.Context) *core.Result {
 	response := ctx.Response

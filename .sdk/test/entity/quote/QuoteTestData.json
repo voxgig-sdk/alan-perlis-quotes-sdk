@@ -2,13 +2,16 @@
   "existing": {
     "quote": {
       "QUOTE00": {
-        "quote": "sa"
+        "quote": "sa",
+        "id": "QUOTE00"
       },
       "QUOTE01": {
-        "quote": "s14"
+        "quote": "s14",
+        "id": "QUOTE01"
       },
       "QUOTE02": {
-        "quote": "s1e"
+        "quote": "s1e",
+        "id": "QUOTE02"
       }
     }
   },
