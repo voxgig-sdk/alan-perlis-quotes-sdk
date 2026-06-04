@@ -17,8 +17,21 @@ main: {
       ]
       title: "Alan Perlis Quotes"
       version: "1.0.0"
+      tagline: "Fetch random Alan Perlis epigrams over a tiny free HTTP API"
+      homepage: "https://perl.is"
+      docs_url: "https://github.com/Chriscbr/perl.is"
+      about_md: `[perl.is](https://perl.is) is a small free API that serves random epigrams by Alan Perlis, the computer scientist best known for his "Epigrams on Programming". It was built by [@rybickic](https://twitter.com/rybickic) and the source is published at [Chriscbr/perl.is](https://github.com/Chriscbr/perl.is).
+
+What you get from the API:
+
+- A \`GET /random\` endpoint that returns a single random Perlis epigram.
+- A companion web interface at [perl.is](https://perl.is) where the same quotes can be browsed and voted on.
+
+No authentication is required and CORS is enabled, so the endpoint can be called directly from browser-side code. Response shape and any rate limits are not documented on the project's landing page.`
+      entity_desc: {
+        quote: "A single Alan Perlis epigram, retrieved at random via `GET /random`."
+      }
+      auth: false
     }
   }
-}
-
 }

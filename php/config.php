@@ -20,9 +20,6 @@ class AlanPerlisQuotesConfig
             ],
             "options" => [
                 "base" => "https://perl.is",
-                "auth" => [
-                    "prefix" => "Bearer",
-                ],
                 "headers" => [
           'content-type' => 'application/json',
         ],

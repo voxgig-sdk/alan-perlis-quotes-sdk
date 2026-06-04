@@ -99,14 +99,12 @@ func quoteDirectSetup(mockres any) *quoteDirectSetupResult {
 	env := envOverride(map[string]any{
 		"ALANPERLISQUOTES_TEST_QUOTE_ENTID": map[string]any{},
 		"ALANPERLISQUOTES_TEST_LIVE":    "FALSE",
-		"ALANPERLISQUOTES_APIKEY":       "NONE",
 	})
 
 	live := env["ALANPERLISQUOTES_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["ALANPERLISQUOTES_APIKEY"],
 		}
 		client := sdk.NewAlanPerlisQuotesSDK(mergedOpts)
 

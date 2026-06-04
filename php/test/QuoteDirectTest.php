@@ -67,14 +67,12 @@ function quote_direct_setup($mockres)
     $env = Runner::env_override([
         "ALANPERLISQUOTES_TEST_QUOTE_ENTID" => [],
         "ALANPERLISQUOTES_TEST_LIVE" => "FALSE",
-        "ALANPERLISQUOTES_APIKEY" => "NONE",
     ]);
 
     $live = $env["ALANPERLISQUOTES_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [
-            "apikey" => $env["ALANPERLISQUOTES_APIKEY"],
         ];
         $client = new AlanPerlisQuotesSDK($merged_opts);
         return [

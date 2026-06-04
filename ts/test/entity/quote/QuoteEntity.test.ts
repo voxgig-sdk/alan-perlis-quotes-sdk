@@ -113,7 +113,6 @@ function basicSetup(extra?: any) {
     'ALAN_PERLIS_QUOTES_TEST_QUOTE_ENTID': idmap,
     'ALAN_PERLIS_QUOTES_TEST_LIVE': 'FALSE',
     'ALAN_PERLIS_QUOTES_TEST_EXPLAIN': 'FALSE',
-    'ALAN_PERLIS_QUOTES_APIKEY': 'NONE',
   })
 
   idmap = env['ALAN_PERLIS_QUOTES_TEST_QUOTE_ENTID']
@@ -123,7 +122,6 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new AlanPerlisQuotesSDK(merge([
       {
-        apikey: env.ALAN_PERLIS_QUOTES_APIKEY,
       },
       extra
     ]))

@@ -74,14 +74,12 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'ALANPERLISQUOTES_TEST_QUOTE_ENTID': {},
     'ALANPERLISQUOTES_TEST_LIVE': 'FALSE',
-    'ALANPERLISQUOTES_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.ALANPERLISQUOTES_TEST_LIVE
 
   if (live) {
     const client = new AlanPerlisQuotesSDK({
-      apikey: env.ALANPERLISQUOTES_APIKEY,
     })
 
     let idmap: any = env['ALANPERLISQUOTES_TEST_QUOTE_ENTID']

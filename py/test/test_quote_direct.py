@@ -59,14 +59,12 @@ def _quote_direct_setup(mockres):
     env = runner.env_override({
         "ALANPERLISQUOTES_TEST_QUOTE_ENTID": {},
         "ALANPERLISQUOTES_TEST_LIVE": "FALSE",
-        "ALANPERLISQUOTES_APIKEY": "NONE",
     })
 
     live = env.get("ALANPERLISQUOTES_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
-            "apikey": env.get("ALANPERLISQUOTES_APIKEY"),
         }
         client = AlanPerlisQuotesSDK(merged_opts)
         return {
