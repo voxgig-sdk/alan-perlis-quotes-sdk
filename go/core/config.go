@@ -14,6 +14,9 @@ func MakeConfig() map[string]any {
 		},
 		"options": map[string]any{
 			"base": "https://perl.is",
+			"auth": map[string]any{
+				"prefix": "Bearer",
+			},
 			"headers": map[string]any{
 				"content-type": "application/json",
 			},
@@ -25,35 +28,35 @@ func MakeConfig() map[string]any {
 			"quote": map[string]any{
 				"fields": []any{
 					map[string]any{
+						"active": true,
 						"name": "quote",
 						"req": false,
 						"type": "`$STRING`",
-						"active": true,
 						"index$": 0,
 					},
 				},
 				"name": "quote",
 				"op": map[string]any{
 					"load": map[string]any{
+						"input": "data",
 						"name": "load",
 						"points": []any{
 							map[string]any{
+								"active": true,
+								"args": map[string]any{},
 								"method": "GET",
 								"orig": "/random",
 								"parts": []any{
 									"random",
 								},
+								"select": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
-									"res": "`body`",
+									"res": "`body.quote`",
 								},
-								"active": true,
-								"args": map[string]any{},
-								"select": map[string]any{},
 								"index$": 0,
 							},
 						},
-						"input": "data",
 						"key$": "load",
 					},
 				},

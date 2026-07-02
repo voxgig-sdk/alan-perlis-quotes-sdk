@@ -15,6 +15,9 @@ def make_config():
         },
         "options": {
             "base": "https://perl.is",
+            "auth": {
+                "prefix": "Bearer",
+            },
             "headers": {
         "content-type": "application/json",
       },
@@ -26,35 +29,35 @@ def make_config():
       "quote": {
         "fields": [
           {
+            "active": True,
             "name": "quote",
             "req": False,
             "type": "`$STRING`",
-            "active": True,
             "index$": 0,
           },
         ],
         "name": "quote",
         "op": {
           "load": {
+            "input": "data",
             "name": "load",
             "points": [
               {
+                "active": True,
+                "args": {},
                 "method": "GET",
                 "orig": "/random",
                 "parts": [
                   "random",
                 ],
+                "select": {},
                 "transform": {
                   "req": "`reqdata`",
-                  "res": "`body`",
+                  "res": "`body.quote`",
                 },
-                "active": True,
-                "args": {},
-                "select": {},
                 "index$": 0,
               },
             ],
-            "input": "data",
             "key$": "load",
           },
         },

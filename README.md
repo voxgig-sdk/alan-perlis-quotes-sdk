@@ -1,19 +1,8 @@
 # AlanPerlisQuotes SDK
 
-Fetch random Alan Perlis epigrams over a tiny free HTTP API
+Alan Perlis Quotes client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About Alan Perlis Quotes
-
-[perl.is](https://perl.is) is a small free API that serves random epigrams by Alan Perlis, the computer scientist best known for his "Epigrams on Programming". It was built by [@rybickic](https://twitter.com/rybickic) and the source is published at [Chriscbr/perl.is](https://github.com/Chriscbr/perl.is).
-
-What you get from the API:
-
-- A `GET /random` endpoint that returns a single random Perlis epigram.
-- A companion web interface at [perl.is](https://perl.is) where the same quotes can be browsed and voted on.
-
-No authentication is required and CORS is enabled, so the endpoint can be called directly from browser-side code. Response shape and any rate limits are not documented on the project's landing page.
 
 ## Try it
 
@@ -47,27 +36,31 @@ gem install alan-perlis-quotes-sdk
 luarocks install alan-perlis-quotes-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { AlanPerlisQuotesSDK } from 'alan-perlis-quotes'
 
-const client = new AlanPerlisQuotesSDK({})
+const client = new AlanPerlisQuotesSDK({
+  apikey: process.env.ALAN-PERLIS-QUOTES_APIKEY,
+})
 
+// Load quote data
+const quote = await client.Quote().load({})
+console.log(quote.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -97,7 +90,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Quote** | A single Alan Perlis epigram, retrieved at random via `GET /random`. | `/random` |
+| **Quote** |  | `/random` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -107,15 +100,17 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from alanperlisquotes_sdk import AlanPerlisQuotesSDK
 
-client = AlanPerlisQuotesSDK({})
+client = AlanPerlisQuotesSDK({
+    "apikey": os.environ.get("ALAN-PERLIS-QUOTES_APIKEY"),
+})
 
 
 # Load a specific quote
-quote, err = client.Quote(None).load(
-    {"id": "example_id"}, None
-)
+quote, err = client.Quote().load({"id": "example_id"})
+print(quote)
 ```
 
 ### PHP
@@ -124,13 +119,14 @@ quote, err = client.Quote(None).load(
 <?php
 require_once 'alanperlisquotes_sdk.php';
 
-$client = new AlanPerlisQuotesSDK([]);
+$client = new AlanPerlisQuotesSDK([
+    "apikey" => getenv("ALAN-PERLIS-QUOTES_APIKEY"),
+]);
 
 
 // Load a specific quote
-[$quote, $err] = $client->Quote(null)->load(
-    ["id" => "example_id"], null
-);
+[$quote, $err] = $client->Quote()->load(["id" => "example_id"]);
+print_r($quote);
 ```
 
 ### Golang
@@ -138,8 +134,13 @@ $client = new AlanPerlisQuotesSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/alan-perlis-quotes-sdk/go"
 
-client := sdk.NewAlanPerlisQuotesSDK(map[string]any{})
+client := sdk.NewAlanPerlisQuotesSDK(map[string]any{
+    "apikey": os.Getenv("ALAN-PERLIS-QUOTES_APIKEY"),
+})
 
+// Load quote data
+quote, err := client.Quote(nil).Load(map[string]any{}, nil)
+fmt.Println(quote)
 ```
 
 ### Ruby
@@ -147,13 +148,14 @@ client := sdk.NewAlanPerlisQuotesSDK(map[string]any{})
 ```ruby
 require_relative "AlanPerlisQuotes_sdk"
 
-client = AlanPerlisQuotesSDK.new({})
+client = AlanPerlisQuotesSDK.new({
+  "apikey" => ENV["ALAN-PERLIS-QUOTES_APIKEY"],
+})
 
 
 # Load a specific quote
-quote, err = client.Quote(nil).load(
-  { "id" => "example_id" }, nil
-)
+quote, err = client.Quote().load({ "id" => "example_id" })
+puts quote
 ```
 
 ### Lua
@@ -161,13 +163,14 @@ quote, err = client.Quote(nil).load(
 ```lua
 local sdk = require("alan-perlis-quotes_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("ALAN-PERLIS-QUOTES_APIKEY"),
+})
 
 
 -- Load a specific quote
-local quote, err = client:Quote(nil):load(
-  { id = "example_id" }, nil
-)
+local quote, err = client:Quote():load({ id = "example_id" })
+print(quote)
 ```
 
 ## Unit testing in offline mode
@@ -186,25 +189,21 @@ const result = await client.Quote().load({ id: 'test01' })
 ### Python
 
 ```python
-client = AlanPerlisQuotesSDK.test(None, None)
-result, err = client.Quote(None).load(
-    {"id": "test01"}, None
-)
+client = AlanPerlisQuotesSDK.test()
+result, err = client.Quote().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = AlanPerlisQuotesSDK::test(null, null);
-[$result, $err] = $client->Quote(null)->load(
-    ["id" => "test01"], null
-);
+$client = AlanPerlisQuotesSDK::test();
+[$result, $err] = $client->Quote()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Quote(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -213,19 +212,15 @@ result, err := client.Quote(nil).Load(
 ### Ruby
 
 ```ruby
-client = AlanPerlisQuotesSDK.test(nil, nil)
-result, err = client.Quote(nil).load(
-  { "id" => "test01" }, nil
-)
+client = AlanPerlisQuotesSDK.test
+result, err = client.Quote().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Quote(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Quote():load({ id = "test01" })
 ```
 
 ## How it works
@@ -329,11 +324,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the Alan Perlis Quotes
-
-- Upstream: [https://perl.is](https://perl.is)
-- API docs: [https://github.com/Chriscbr/perl.is](https://github.com/Chriscbr/perl.is)
 
 ---
 

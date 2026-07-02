@@ -20,6 +20,9 @@ class AlanPerlisQuotesConfig
             ],
             "options" => [
                 "base" => "https://perl.is",
+                "auth" => [
+                    "prefix" => "Bearer",
+                ],
                 "headers" => [
           'content-type' => 'application/json',
         ],
@@ -31,35 +34,35 @@ class AlanPerlisQuotesConfig
         'quote' => [
           'fields' => [
             [
+              'active' => true,
               'name' => 'quote',
               'req' => false,
               'type' => '`$STRING`',
-              'active' => true,
               'index$' => 0,
             ],
           ],
           'name' => 'quote',
           'op' => [
             'load' => [
+              'input' => 'data',
               'name' => 'load',
               'points' => [
                 [
+                  'active' => true,
+                  'args' => [],
                   'method' => 'GET',
                   'orig' => '/random',
                   'parts' => [
                     'random',
                   ],
+                  'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.quote`',
                   ],
-                  'active' => true,
-                  'args' => [],
-                  'select' => [],
                   'index$' => 0,
                 ],
               ],
-              'input' => 'data',
               'key$' => 'load',
             ],
           ],
