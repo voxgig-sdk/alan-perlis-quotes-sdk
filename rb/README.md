@@ -10,13 +10,13 @@ The Ruby SDK for the AlanPerlisQuotes API — an entity-oriented client using id
 
 ## Install
 ```bash
-gem install alan-perlis-quotes-sdk
+gem install voxgig-sdk-alan-perlis-quotes
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "alan-perlis-quotes-sdk"
+gem "voxgig-sdk-alan-perlis-quotes"
 ```
 
 Then run:

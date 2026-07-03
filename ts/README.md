@@ -10,7 +10,7 @@ The TypeScript SDK for the AlanPerlisQuotes API — a type-safe, entity-oriented
 
 ## Install
 ```bash
-npm install alan-perlis-quotes
+npm install @voxgig-sdk/alan-perlis-quotes
 ```
 ## Tutorial: your first API call
 

@@ -10,7 +10,7 @@ The Python SDK for the AlanPerlisQuotes API — an entity-oriented client follow
 
 ## Install
 ```bash
-pip install alan-perlis-quotes-sdk
+pip install voxgig-sdk-alan-perlis-quotes
 ```
 
 Or install from source:

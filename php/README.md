@@ -10,7 +10,7 @@ The PHP SDK for the AlanPerlisQuotes API — an entity-oriented client using PHP
 
 ## Install
 ```bash
-composer require voxgig/alan-perlis-quotes-sdk
+composer require voxgig-sdk/alan-perlis-quotes
 ```
 
 
