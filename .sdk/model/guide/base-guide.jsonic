@@ -8,7 +8,6 @@ guide: {
   entity: quote: {
     path: "/random": {
       op: load: method: *GET
-      op: load: transform: res: *("`body.quote`")|top
     }
   }
 

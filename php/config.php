@@ -55,7 +55,7 @@ class AlanPerlisQuotesConfig
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body.quote`',
+                    'res' => '`body`',
                   ],
                   'index$' => 0,
                 ],

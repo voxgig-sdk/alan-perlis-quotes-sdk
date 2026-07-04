@@ -109,7 +109,7 @@ Alias for `AlanPerlisQuotesSDK.test()`.
 ## QuoteEntity
 
 ```ts
-const quote = client.quote
+const quote = client.Quote()
 ```
 
 ### Fields
@@ -125,7 +125,7 @@ const quote = client.quote
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.quote.load({ id: 'quote_id' })
+const result = await client.Quote().load({ id: 'quote_id' })
 ```
 
 ### Common Methods
