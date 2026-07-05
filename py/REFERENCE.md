@@ -8,7 +8,7 @@ Complete API reference for the AlanPerlisQuotes Python SDK.
 ### Constructor
 
 ```python
-from alan-perlis-quotes_sdk import AlanPerlisQuotesSDK
+from alanperlisquotes_sdk import AlanPerlisQuotesSDK
 
 client = AlanPerlisQuotesSDK(options)
 ```
@@ -87,7 +87,7 @@ quote = client.Quote()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | ``$STRING`` | No |  |
+| `quote` | `str` | No |  |
 
 ### Operations
 
@@ -96,7 +96,7 @@ quote = client.Quote()
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Quote().load({"id": "quote_id"})
+result = client.Quote().load()
 ```
 
 ### Common Methods

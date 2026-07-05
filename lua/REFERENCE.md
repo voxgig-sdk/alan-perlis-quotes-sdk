@@ -90,7 +90,7 @@ local quote = client:Quote(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | ``$STRING`` | No |  |
+| `quote` | `string` | No |  |
 
 ### Operations
 
@@ -99,7 +99,7 @@ local quote = client:Quote(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:Quote():load({ id = "quote_id" })
+local result, err = client:Quote():load()
 ```
 
 ### Common Methods

@@ -18,7 +18,7 @@ class Quote
     public ?string $quote = null;
 }
 
-/** Match filter for Quote#load (any subset of Quote fields). */
+/** Request payload for Quote#load. */
 class QuoteLoadMatch
 {
     public ?string $quote = null;

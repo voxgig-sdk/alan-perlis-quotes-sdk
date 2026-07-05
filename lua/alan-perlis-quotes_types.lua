@@ -10,6 +10,7 @@
 ---@field quote? string
 
 ---@class QuoteLoadMatch
+---@field quote? string
 
 local M = {}
 

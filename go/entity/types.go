@@ -13,8 +13,7 @@ type Quote struct {
 	Quote *string `json:"quote,omitempty"`
 }
 
-// QuoteLoadMatch mirrors the quote fields as an all-optional match
-// filter (Go analog of Partial<Quote>).
+// QuoteLoadMatch is the typed request payload for Quote.LoadTyped.
 type QuoteLoadMatch struct {
 	Quote *string `json:"quote,omitempty"`
 }

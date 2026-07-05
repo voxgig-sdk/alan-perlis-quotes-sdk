@@ -97,7 +97,7 @@ quote := client.Quote(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | ``$STRING`` | No |  |
+| `quote` | `string` | No |  |
 
 ### Operations
 
@@ -106,7 +106,7 @@ quote := client.Quote(nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Quote(nil).Load(map[string]any{"id": "quote_id"}, nil)
+result, err := client.Quote(nil).Load(nil, nil)
 ```
 
 ### Common Methods

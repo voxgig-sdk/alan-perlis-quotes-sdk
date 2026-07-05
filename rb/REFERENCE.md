@@ -8,7 +8,7 @@ Complete API reference for the AlanPerlisQuotes Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'alan-perlis-quotes_sdk'
+require_relative 'AlanPerlisQuotes_sdk'
 
 client = AlanPerlisQuotesSDK.new(options)
 ```
@@ -93,7 +93,7 @@ quote = client.Quote
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | ``$STRING`` | No |  |
+| `quote` | `String` | No |  |
 
 ### Operations
 
@@ -102,7 +102,7 @@ quote = client.Quote
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Quote.load({ "id" => "quote_id" })
+result = client.Quote.load()
 ```
 
 ### Common Methods

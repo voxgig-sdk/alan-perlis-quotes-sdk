@@ -116,7 +116,7 @@ const quote = client.Quote()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | ``$STRING`` | No |  |
+| `quote` | `string` | No |  |
 
 ### Operations
 
@@ -125,7 +125,7 @@ const quote = client.Quote()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Quote().load({ id: 'quote_id' })
+const result = await client.Quote().load()
 ```
 
 ### Common Methods

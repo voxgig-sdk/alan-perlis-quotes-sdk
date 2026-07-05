@@ -9,5 +9,7 @@ export interface Quote {
   quote?: string
 }
 
-export type QuoteLoadMatch = Partial<Quote>
+export interface QuoteLoadMatch {
+  quote?: string
+}
 

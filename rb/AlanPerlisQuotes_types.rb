@@ -17,7 +17,7 @@ Quote = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Quote#load (any subset of Quote fields).
+# Request payload for Quote#load.
 #
 # @!attribute [rw] quote
 #   @return [String, nil]
