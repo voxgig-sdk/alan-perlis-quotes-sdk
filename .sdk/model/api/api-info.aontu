@@ -16,9 +16,9 @@ main: {
           url: "https://perl.is"
         }
       ]
+      summary: "This API provides random epigrams by Alan Perlis, a notable figure in computer science."
       title: "Alan Perlis Quotes"
       version: "1.0.0"
+      website: "https://perl.is/"
     }
   }
-}
-

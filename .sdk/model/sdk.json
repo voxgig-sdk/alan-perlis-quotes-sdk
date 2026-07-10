@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -195,14 +192,17 @@
           "url": "https://perl.is/"
         },
         "description": "This API provides random epigrams by Alan Perlis, a notable figure in computer science. Users can programmatically access a variety of his thought-provoking quotes to enhance their applications or for inspiration.",
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://perl.is"
           }
         ],
+        "summary": "This API provides random epigrams by Alan Perlis, a notable figure in computer science.",
         "title": "Alan Perlis Quotes",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "website": "https://perl.is/"
       },
       "option": {},
       "target": {
@@ -255,6 +255,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -305,6 +308,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
