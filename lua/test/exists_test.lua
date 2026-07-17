@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- AlanPerlisQuotes SDK exists test
 
 local sdk = require("alan-perlis-quotes_sdk")
 
