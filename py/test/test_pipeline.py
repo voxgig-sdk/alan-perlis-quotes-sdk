@@ -16,11 +16,11 @@
 import pytest
 
 from alanperlisquotes_sdk import AlanPerlisQuotesSDK
-from core.error import AlanPerlisQuotesError
-from core.result import AlanPerlisQuotesResult
-from core.response import AlanPerlisQuotesResponse
-from core.spec import AlanPerlisQuotesSpec
-from feature.base_feature import AlanPerlisQuotesBaseFeature
+from alanperlisquotes_sdk.core.error import AlanPerlisQuotesError
+from alanperlisquotes_sdk.core.result import AlanPerlisQuotesResult
+from alanperlisquotes_sdk.core.response import AlanPerlisQuotesResponse
+from alanperlisquotes_sdk.core.spec import AlanPerlisQuotesSpec
+from alanperlisquotes_sdk.feature.base_feature import AlanPerlisQuotesBaseFeature
 
 
 def _client():

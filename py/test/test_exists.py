@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# AlanPerlisQuotes SDK exists test
 
 import pytest
 from alanperlisquotes_sdk import AlanPerlisQuotesSDK

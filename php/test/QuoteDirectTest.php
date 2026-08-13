@@ -65,11 +65,11 @@ function quote_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "ALANPERLISQUOTES_TEST_QUOTE_ENTID" => [],
-        "ALANPERLISQUOTES_TEST_LIVE" => "FALSE",
+        "ALAN_PERLIS_QUOTES_TEST_QUOTE_ENTID" => [],
+        "ALAN_PERLIS_QUOTES_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["ALANPERLISQUOTES_TEST_LIVE"] === "TRUE";
+    $live = $env["ALAN_PERLIS_QUOTES_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

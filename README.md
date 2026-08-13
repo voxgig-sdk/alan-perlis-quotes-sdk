@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = AlanPerlisQuotesSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = AlanPerlisQuotesSDK.test({
+  entity: {
+    quote: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const quote = await client.Quote().load()
-// quote is a bare Quote populated with mock data
+// quote is the Quote entity, populated with mock data
+// — call quote.data() for the record itself
 console.log(quote)
 ```
 
@@ -182,7 +191,7 @@ require_once 'alanperlisquotes_sdk.php';
 $client = new AlanPerlisQuotesSDK();
 
 
-// Load a specific quote (returns the bare record; throws on error)
+// Load a specific quote (returns the ENTITY; call data_get() for the record; throws on error)
 $quote = $client->Quote()->load();
 print_r($quote);
 ```
@@ -210,7 +219,7 @@ require_relative "AlanPerlisQuotes_sdk"
 client = AlanPerlisQuotesSDK.new
 
 
-# Load a specific quote (returns the bare record; raises on error)
+# Load a specific quote (returns the ENTITY; call data_get for the record)
 quote = client.Quote.load()
 puts quote
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://perl.is/](https://perl.is/)
 

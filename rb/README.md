@@ -34,7 +34,7 @@ client = AlanPerlisQuotesSDK.new
 
 ```ruby
 begin
-  # load returns the bare Quote record (raises on error).
+  # load returns the ENTITY — call data_get for the Quote record (raises on error).
   quote = client.Quote.load()
   puts quote
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = AlanPerlisQuotesSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 quote = client.Quote.load()
 puts quote
 ```
@@ -264,7 +265,7 @@ Create an instance: `quote = client.Quote`
 #### Example: Load
 
 ```ruby
-# load returns the bare Quote record (raises on error).
+# load returns the ENTITY — call data_get for the Quote record (raises on error).
 quote = client.Quote.load()
 ```
 

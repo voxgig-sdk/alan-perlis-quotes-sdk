@@ -23,8 +23,8 @@ module AlanPerlisQuotesTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("ALANPERLISQUOTES_TEST_LIVE")
-    override = getenv("ALANPERLISQUOTES_TEST_OVERRIDE")
+    live = getenv("ALAN_PERLIS_QUOTES_TEST_LIVE")
+    override = getenv("ALAN_PERLIS_QUOTES_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module AlanPerlisQuotesTestRunner
       end
     end
 
-    explain = getenv("ALANPERLISQUOTES_TEST_EXPLAIN")
-    m["ALANPERLISQUOTES_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("ALAN_PERLIS_QUOTES_TEST_EXPLAIN")
+    m["ALAN_PERLIS_QUOTES_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

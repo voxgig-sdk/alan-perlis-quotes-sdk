@@ -47,6 +47,7 @@ class AlanPerlisQuotesConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/random',
                   'parts' => [

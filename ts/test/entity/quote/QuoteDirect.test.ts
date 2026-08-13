@@ -19,11 +19,15 @@ import {
 describe('QuoteDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when ALANPERLISQUOTES_TEST_LIVE=TRUE.
-  afterEach(liveDelay('ALANPERLISQUOTES_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when ALAN_PERLIS_QUOTES_TEST_LIVE=TRUE.
+  afterEach(liveDelay('ALAN_PERLIS_QUOTES_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new AlanPerlisQuotesSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -72,17 +76,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'ALANPERLISQUOTES_TEST_QUOTE_ENTID': {},
-    'ALANPERLISQUOTES_TEST_LIVE': 'FALSE',
+    'ALAN_PERLIS_QUOTES_TEST_QUOTE_ENTID': {},
+    'ALAN_PERLIS_QUOTES_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.ALANPERLISQUOTES_TEST_LIVE
+  const live = 'TRUE' === env.ALAN_PERLIS_QUOTES_TEST_LIVE
 
   if (live) {
     const client = new AlanPerlisQuotesSDK({
     })
 
-    let idmap: any = env['ALANPERLISQUOTES_TEST_QUOTE_ENTID']
+    let idmap: any = env['ALAN_PERLIS_QUOTES_TEST_QUOTE_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from alanperlisquotes_sdk.utility.voxgig_struct import voxgig_struct as vs
 from alanperlisquotes_sdk import AlanPerlisQuotesSDK
-from core import helpers
+from alanperlisquotes_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _quote_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "ALANPERLISQUOTES_TEST_QUOTE_ENTID": {},
-        "ALANPERLISQUOTES_TEST_LIVE": "FALSE",
+        "ALAN_PERLIS_QUOTES_TEST_QUOTE_ENTID": {},
+        "ALAN_PERLIS_QUOTES_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("ALANPERLISQUOTES_TEST_LIVE") == "TRUE"
+    live = env.get("ALAN_PERLIS_QUOTES_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
