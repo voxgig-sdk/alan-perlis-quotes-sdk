@@ -23,8 +23,8 @@ class AlanPerlisQuotesSDK:
         utility = AlanPerlisQuotesUtility()
         self._utility = utility
 
-        from alanperlisquotes_sdk.config import make_config
-        config = make_config()
+        from alanperlisquotes_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,

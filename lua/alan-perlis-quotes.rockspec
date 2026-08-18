@@ -23,6 +23,7 @@ build = {
   modules = {
     ["alan-perlis-quotes_sdk"] = "alan-perlis-quotes_sdk.lua",
     ["config"] = "config.lua",
+    ["config_shared"] = "config_shared.lua",
     ["features"] = "features.lua",
   }
 }

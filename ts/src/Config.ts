@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://perl.is',
+    base: "https://perl.is",
 
     headers: {
       "content-type": "application/json"
@@ -55,11 +55,8 @@ class Config {
     "quote": {
       "fields": [
         {
-          "active": true,
           "name": "quote",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         }
       ],
       "name": "quote",
@@ -69,7 +66,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -81,11 +77,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

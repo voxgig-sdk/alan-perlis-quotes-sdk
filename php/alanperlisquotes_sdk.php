@@ -40,7 +40,7 @@ class AlanPerlisQuotesSDK
         $utility = new AlanPerlisQuotesUtility();
         $this->_utility = $utility;
 
-        $config = AlanPerlisQuotesConfig::make_config();
+        $config = AlanPerlisQuotesConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

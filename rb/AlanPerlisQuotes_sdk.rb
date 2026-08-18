@@ -28,7 +28,7 @@ class AlanPerlisQuotesSDK
     utility = AlanPerlisQuotesUtility.new
     @_utility = utility
 
-    config = AlanPerlisQuotesConfig.make_config
+    config = AlanPerlisQuotesConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
