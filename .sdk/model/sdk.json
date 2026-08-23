@@ -36,6 +36,7 @@
               "active": true,
               "name": "quote",
               "req": false,
+              "short": "The random Alan Perlis epigram",
               "type": "`$STRING`"
             }
           ],

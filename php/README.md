@@ -245,7 +245,7 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `quote` |  |
+| `quote` | The random Alan Perlis epigram |
 
 Operations: Load.
 
@@ -270,7 +270,7 @@ Create an instance: `$quote = $client->Quote();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `quote` | `string` |  |
+| `quote` | `string` | The random Alan Perlis epigram |
 
 #### Example: Load
 

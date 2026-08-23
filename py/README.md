@@ -241,7 +241,7 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `quote` |  |
+| `quote` | The random Alan Perlis epigram |
 
 Operations: Load.
 
@@ -266,7 +266,7 @@ Create an instance: `quote = client.Quote()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `quote` | `str` |  |
+| `quote` | `str` | The random Alan Perlis epigram |
 
 #### Example: Load
 

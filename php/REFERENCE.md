@@ -92,7 +92,7 @@ $quote = $client->Quote();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | `string` | No |  |
+| `quote` | `string` | No | The random Alan Perlis epigram |
 
 ### Operations
 

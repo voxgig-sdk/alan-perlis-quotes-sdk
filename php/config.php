@@ -33,6 +33,9 @@ class AlanPerlisQuotesConfig
         return [
             "main" => [
                 "name" => "AlanPerlisQuotes",
+                "slug" => "alan-perlis-quotes",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -55,6 +58,7 @@ class AlanPerlisQuotesConfig
           'fields' => [
             [
               'name' => 'quote',
+              'short' => 'The random Alan Perlis epigram',
               'type' => '`$STRING`',
             ],
           ],

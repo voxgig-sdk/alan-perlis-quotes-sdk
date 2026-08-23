@@ -235,7 +235,7 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `quote` |  |
+| `quote` | The random Alan Perlis epigram |
 
 Operations: Load.
 
@@ -260,7 +260,7 @@ Create an instance: `quote = client.Quote`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `quote` | `String` |  |
+| `quote` | `String` | The random Alan Perlis epigram |
 
 #### Example: Load
 

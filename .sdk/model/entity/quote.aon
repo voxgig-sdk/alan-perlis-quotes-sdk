@@ -8,6 +8,7 @@ main: kit: entity: quote: {
     {
       name: "quote"
       req: false
+      short: "The random Alan Perlis epigram"
       type: "`$STRING`"
     }
   ]

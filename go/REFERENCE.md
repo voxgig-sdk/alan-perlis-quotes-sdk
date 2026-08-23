@@ -98,7 +98,7 @@ fmt.Println(quote.GetName()) // "quote"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | `string` | No |  |
+| `quote` | `string` | No | The random Alan Perlis epigram |
 
 ### Operations
 

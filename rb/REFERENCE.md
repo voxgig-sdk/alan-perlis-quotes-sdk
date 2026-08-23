@@ -93,7 +93,7 @@ quote = client.Quote
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | `String` | No |  |
+| `quote` | `String` | No | The random Alan Perlis epigram |
 
 ### Operations
 

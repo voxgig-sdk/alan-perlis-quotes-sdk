@@ -90,7 +90,7 @@ local quote = client:Quote(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `quote` | `string` | No |  |
+| `quote` | `string` | No | The random Alan Perlis epigram |
 
 ### Operations
 

@@ -19,6 +19,9 @@ module AlanPerlisQuotesConfig
     {
       "main" => {
         "name" => "AlanPerlisQuotes",
+        "slug" => "alan-perlis-quotes",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,6 +44,7 @@ module AlanPerlisQuotesConfig
           "fields" => [
             {
               "name" => "quote",
+              "short" => "The random Alan Perlis epigram",
               "type" => "`$STRING`",
             },
           ],
