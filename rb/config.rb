@@ -28,6 +28,7 @@ module AlanPerlisQuotesConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
