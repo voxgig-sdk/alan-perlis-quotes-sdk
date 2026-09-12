@@ -74,13 +74,18 @@ class AlanPerlisQuotesConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/random',
-                  'parts' => [
-                    'random',
+                  'segments' => [
+                    [
+                      'lit' => 'random',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'random',
                   ],
                 ],
               ],

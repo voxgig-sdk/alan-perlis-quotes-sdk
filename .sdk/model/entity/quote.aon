@@ -21,8 +21,10 @@ main: kit: entity: quote: {
         {
           method: "GET"
           orig: "/random"
-          parts: [
-            "random"
+          segments: [
+            {
+              lit: "random"
+            }
           ]
           transform: {
             req: "`reqdata`"
