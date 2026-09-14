@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { AlanPerlisQuotesSDK } from '@voxgig-sdk/alan-perlis-quotes'
+import { AlanPerlisQuotesSDK } from '@voxgig-sdk/alan-perlis-quotes-sdk'
 
 const client = new AlanPerlisQuotesSDK()
 ```
@@ -401,7 +401,7 @@ alan-perlis-quotes/
 Import the SDK from the package root:
 
 ```ts
-import { AlanPerlisQuotesSDK } from '@voxgig-sdk/alan-perlis-quotes'
+import { AlanPerlisQuotesSDK } from '@voxgig-sdk/alan-perlis-quotes-sdk'
 ```
 
 ### Entity state
