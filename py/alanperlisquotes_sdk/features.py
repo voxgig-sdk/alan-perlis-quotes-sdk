@@ -1,12 +1,18 @@
 # AlanPerlisQuotes SDK feature factory
 
 from alanperlisquotes_sdk.feature.base_feature import AlanPerlisQuotesBaseFeature
+from alanperlisquotes_sdk.feature.ratelimit_feature import AlanPerlisQuotesRatelimitFeature
+from alanperlisquotes_sdk.feature.retry_feature import AlanPerlisQuotesRetryFeature
 from alanperlisquotes_sdk.feature.test_feature import AlanPerlisQuotesTestFeature
+from alanperlisquotes_sdk.feature.timeout_feature import AlanPerlisQuotesTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: AlanPerlisQuotesBaseFeature(),
+    "ratelimit": lambda: AlanPerlisQuotesRatelimitFeature(),
+    "retry": lambda: AlanPerlisQuotesRetryFeature(),
     "test": lambda: AlanPerlisQuotesTestFeature(),
+    "timeout": lambda: AlanPerlisQuotesTimeoutFeature(),
 }
 
 

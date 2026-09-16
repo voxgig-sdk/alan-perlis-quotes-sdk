@@ -19,6 +19,12 @@ main: kit: entity: quote: {
       name: "load"
       points: [
         {
+          contract: {
+            id: "GET /random"
+            json: "{\"operationId\":\"getRandomQuote\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"quote\":{\"description\":\"The random Alan Perlis epigram\",\"example\":\"A programming language is low level when its programs require attention to the irrelevant.\",\"type\":\"string\"}},\"type\":\"object\"}},\"text/plain\":{\"schema\":{\"example\":\"A programming language is low level when its programs require attention to the irrelevant.\",\"type\":\"string\"}}},\"description\":\"Successful response with a random Alan Perlis quote\"},\"500\":{\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/random"
           segments: [
