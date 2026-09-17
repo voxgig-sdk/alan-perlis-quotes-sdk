@@ -105,12 +105,12 @@ local result, err = client:Quote():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/alan-perlis-quotes-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/releases) |
-| Python | `voxgig-sdk-alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/releases) |
-| PHP | `voxgig-sdk/alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/releases) |
+| TypeScript | `@voxgig-sdk/alan-perlis-quotes-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/tags) |
+| Python | `voxgig-sdk-alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/tags) |
+| PHP | `voxgig-sdk/alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/alan-perlis-quotes-sdk/go` | `go get github.com/voxgig-sdk/alan-perlis-quotes-sdk/go@latest` |
-| Ruby | `voxgig-sdk-alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/releases) |
-| Lua | `voxgig-sdk-alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/releases) |
+| Ruby | `voxgig-sdk-alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/tags) |
+| Lua | `voxgig-sdk-alan-perlis-quotes` | publish pending — [install from git tag](https://github.com/voxgig-sdk/alan-perlis-quotes-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/alan-perlis-quotes-sdk/go-cli` | `go install github.com/voxgig-sdk/alan-perlis-quotes-sdk/go-cli/cmd/alan-perlis-quotes@latest` |
 | Go MCP server | `github.com/voxgig-sdk/alan-perlis-quotes-sdk/go-mcp` | `go get github.com/voxgig-sdk/alan-perlis-quotes-sdk/go-mcp@latest` |
 
