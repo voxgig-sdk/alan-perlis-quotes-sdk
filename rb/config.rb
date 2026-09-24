@@ -99,8 +99,9 @@ module AlanPerlisQuotesConfig
           "fields" => [
             {
               "name" => "quote",
-              "short" => "The random Alan Perlis epigram",
+              "title" => "Quote",
               "type" => "`$STRING`",
+              "short" => "The random Alan Perlis epigram",
             },
           ],
           "name" => "quote",
@@ -110,7 +111,6 @@ module AlanPerlisQuotesConfig
               "name" => "load",
               "points" => [
                 {
-                  "args" => {},
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/random",
@@ -119,14 +119,16 @@ module AlanPerlisQuotesConfig
                       "lit" => "random",
                     },
                   ],
-                  "select" => {},
+                  "parts" => [
+                    "random",
+                  ],
+                  "rename" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
-                  "parts" => [
-                    "random",
-                  ],
+                  "args" => {},
+                  "select" => {},
                 },
               ],
             },

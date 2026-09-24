@@ -87,8 +87,9 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "quote",
-            ["short"] = "The random Alan Perlis epigram",
+            ["title"] = "Quote",
             ["type"] = "`$STRING`",
+            ["short"] = "The random Alan Perlis epigram",
           },
         },
         ["name"] = "quote",
@@ -98,7 +99,6 @@ local function make_config()
             ["name"] = "load",
             ["points"] = {
               {
-                ["args"] = {},
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/random",
@@ -107,14 +107,16 @@ local function make_config()
                     ["lit"] = "random",
                   },
                 },
-                ["select"] = {},
+                ["parts"] = {
+                  "random",
+                },
+                ["rename"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
                 },
-                ["parts"] = {
-                  "random",
-                },
+                ["args"] = {},
+                ["select"] = {},
               },
             },
           },

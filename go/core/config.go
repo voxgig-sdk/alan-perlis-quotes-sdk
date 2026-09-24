@@ -91,8 +91,9 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "quote",
-						"short": "The random Alan Perlis epigram",
+						"title": "Quote",
 						"type": "`$STRING`",
+						"short": "The random Alan Perlis epigram",
 					},
 				},
 				"name": "quote",
@@ -102,7 +103,6 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/random",
@@ -111,14 +111,16 @@ func MakeConfig() map[string]any {
 										"lit": "random",
 									},
 								},
-								"select": map[string]any{},
+								"parts": []any{
+									"random",
+								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"random",
-								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

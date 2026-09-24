@@ -1,0 +1,46 @@
+# Entity: quote
+
+main: kit: entity: quote: {
+
+  alias: field: {}
+
+  fields: {
+    quote: {
+      h: "Quote"
+      n: "quote"
+      r: false
+      sh: "The random Alan Perlis epigram"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "quote"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /random"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/random"
+          s: [
+            {
+              lit: "random"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

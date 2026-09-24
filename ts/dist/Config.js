@@ -11,19 +11,12 @@ const FEATURE_CLASS = {
     test: TestFeature_1.TestFeature,
     timeout: TimeoutFeature_1.TimeoutFeature,
 };
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS = {};
 exports.FEATURE_PLUGINS = FEATURE_PLUGINS;
 class Config {
     makeFeature(fn) {
         const fc = FEATURE_CLASS[fn];
         const fi = new fc();
-        // TODO: errors etc
         return fi;
     }
     // False for a feature added at runtime via options.extend (station's
@@ -114,8 +107,9 @@ class Config {
             "fields": [
                 {
                     "name": "quote",
-                    "short": "The random Alan Perlis epigram",
-                    "type": "`$STRING`"
+                    "title": "Quote",
+                    "type": "`$STRING`",
+                    "short": "The random Alan Perlis epigram"
                 }
             ],
             "name": "quote",
@@ -125,7 +119,6 @@ class Config {
                     "name": "load",
                     "points": [
                         {
-                            "args": {},
                             "kind": "http",
                             "method": "GET",
                             "orig": "/random",
@@ -134,14 +127,16 @@ class Config {
                                     "lit": "random"
                                 }
                             ],
-                            "select": {},
+                            "parts": [
+                                "random"
+                            ],
+                            "rename": {},
                             "transform": {
                                 "req": "`reqdata`",
                                 "res": "`body`"
                             },
-                            "parts": [
-                                "random"
-                            ]
+                            "args": {},
+                            "select": {}
                         }
                     ]
                 }
